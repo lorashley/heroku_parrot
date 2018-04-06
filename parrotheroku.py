@@ -3,7 +3,7 @@ import json
 import os
 from flask import Flask, request
 
-at = 'ZTczNGYyNjEtYWVhNi00N2UxLWJmOGUtMzBjNzkyODI5ZWNiNzU3ODg4OTgtMzNk'
+#at = 'ZTczNGYyNjEtYWVhNi00N2UxLWJmOGUtMzBjNzkyODI5ZWNiNzU3ODg4OTgtMzNk'
 
 # Init Flask
 app = Flask(__name__)
@@ -63,6 +63,8 @@ ENTRY FUNCTION FOR HEROKU
 @app.route('/', methods=['POST'])
 def main():
 
+    username = os.environ.get('SPARK_BOT_USERNAME')
+    print("Username from environment: {}".format(username))
 # Get input info
     json_file = request.json
     resource = json_file['resource']
@@ -71,7 +73,8 @@ def main():
 
     # Check if the message came from the bot, if so, ignore
     person = data.get('personEmail')
-    if person == 'heroku_parrot@sparkbot.io':
+    bot_name = username + '@sparkbot.io'
+    if person == bot_name:
         return 'heroku done', 200
     
     # Get message contents
@@ -89,6 +92,8 @@ def main():
     room_id = data.get('roomId')
     
     # Send the spark message
+    at = os.environ.get('SPARK_BOT_AUTH_TOKEN')
+    print("auth: {}".format(at))
     msg_dict = post_message_markdown(at, text, room_id)
     
     
