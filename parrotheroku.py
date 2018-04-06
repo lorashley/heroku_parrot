@@ -65,6 +65,9 @@ def main():
 
     username = os.environ.get('SPARK_BOT_USERNAME')
     print("Username from environment: {}".format(username))
+    
+    at = os.environ.get('SPARK_BOT_AUTH_TOKEN')
+    print("auth: {}".format(at))
 # Get input info
     json_file = request.json
     resource = json_file['resource']
@@ -92,11 +95,8 @@ def main():
     room_id = data.get('roomId')
     
     # Send the spark message
-    at = os.environ.get('SPARK_BOT_AUTH_TOKEN')
-    print("auth: {}".format(at))
+    
     msg_dict = post_message_markdown(at, text, room_id)
-    
-    
     return message_dict['statuscode']
     
 if __name__ == "__main__":
