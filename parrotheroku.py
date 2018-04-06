@@ -3,8 +3,6 @@ import json
 import os
 from flask import Flask, request
 
-#at = 'ZTczNGYyNjEtYWVhNi00N2UxLWJmOGUtMzBjNzkyODI5ZWNiNzU3ODg4OTgtMzNk'
-
 # Init Flask
 app = Flask(__name__)
 
@@ -64,11 +62,11 @@ ENTRY FUNCTION FOR HEROKU
 def main():
 
     username = os.environ.get('SPARK_BOT_USERNAME')
-    print("Username from environment: {}".format(username))
+    #print("Username from environment: {}".format(username))
     
     at = os.environ.get('SPARK_BOT_AUTH_TOKEN')
-    print("auth: {}".format(at))
-# Get input info
+    #print("auth: {}".format(at))
+    # Get input info
     json_file = request.json
     resource = json_file['resource']
     event = json_file['event']
