@@ -72,14 +72,17 @@ def main():
     # Check if the message came from the bot, if so, ignore
     person = data.get('personEmail')
     if person == 'aws_parrot@sparkbot.io':
-        return
+        return 'heroku done', 200
     
     # Get message contents
     msg_id = data.get('id')
     msg_dict = get_message(at, msg_id)
     #Parse the text
     input = msg_dict.get('text')
-    if text: text = listen(input)
+    if input: 
+        text = listen(input)
+    else:
+        return 'heroku done', 200
     
     # Get room information to send back to room the response
     #Parse the roomId
