@@ -71,7 +71,7 @@ def main():
 
     # Check if the message came from the bot, if so, ignore
     person = data.get('personEmail')
-    if person == 'aws_parrot@sparkbot.io':
+    if person == 'heroku_parrot@sparkbot.io':
         return 'heroku done', 200
     
     # Get message contents
