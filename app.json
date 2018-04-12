@@ -4,14 +4,12 @@
   "repository": "https://github.com/lorashley/heroku_parrot",
   "keywords": ["python", "flask", "cisco", "spark"],
   "env": {
-    "PYTHON_ENV": "production",
-    "COOKIE_SECRET": {
-            "description": "This gets generated",
-            "generator": "secret"
+    "SPARK_BOT_AUTH_TOKEN": {
+            "description": "Create your app on https://developer.ciscospark.com/apps.html and you'll get a token",
     },
-    "SETUP_BY": {
-            "description": "Who initiated this setup",
-            "value": ""
+    "SPARK_BOT_USERNAME": {
+            "description": "The name of your bot preceding @sparkbot.io",
+            "value": "your_bot_name@sparkbot.io"
     }
   }
 }
