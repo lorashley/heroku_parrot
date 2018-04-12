@@ -2,6 +2,5 @@
   "name": "Heroku Parrot",
   "description": "A simple Cisco Spark bot using Python and Heroku",
   "repository": "https://github.com/lorashley/heroku_parrot",
-  "logo": "",
   "keywords": ["python", "flask", "cisco", "spark"]
 }
