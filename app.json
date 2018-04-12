@@ -2,5 +2,16 @@
   "name": "Heroku Parrot",
   "description": "A simple Cisco Spark bot using Python and Heroku",
   "repository": "https://github.com/lorashley/heroku_parrot",
-  "keywords": ["python", "flask", "cisco", "spark"]
+  "keywords": ["python", "flask", "cisco", "spark"],
+  "env": {
+    "PYTHON_ENV": "production",
+    "COOKIE_SECRET": {
+            "description": "This gets generated",
+            "generator": "secret"
+    },
+    "SETUP_BY": {
+            "description": "Who initiated this setup",
+            "value": ""
+    }
+  }
 }
