@@ -75,6 +75,7 @@ def main():
     # Check if the message came from the bot, if so, ignore
     person = data.get('personEmail')
     bot_name = username + '@sparkbot.io'
+    print(person, bot_name)
     if person == bot_name:
         return 'heroku done', 200
     
