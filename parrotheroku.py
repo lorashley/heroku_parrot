@@ -98,7 +98,7 @@ def main():
     # Send the spark message
     
     msg_dict = post_message_markdown(at, text, room_id)
-    return message_dict['statuscode']
+    return msg_dict['statuscode']
     
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
