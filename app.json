@@ -11,5 +11,6 @@
 			"description": "The name of your bot preceding @sparkbot.io",
 			"value": "your_bot_name@sparkbot.io"
 		}
-	}
+	},
+	"success_url": "/"
 }
