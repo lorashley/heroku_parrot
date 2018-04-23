@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
     <title>Hello, world!</title>
   </head>
   <body>
@@ -16,10 +16,16 @@
       <p class="lead">You've successfully deployed an instance of <a href="https://github.com/lorashley/heroku_parrot">this</a> Webex Teams bot.</p>
       <hr class="my-4">
       <p><b>Reminder:</b> In order for the bot to actually work, you need to create a <a href="https://developer.webex.com/endpoint-webhooks-post.html">webhook</a> using your bot's authentication token.
-      The <b>targetUrl</b> will be the url of your Heroku app, it'll be something like <i>appname</i>.herokuapp.com ... this will connect the client messages to the bot to the bot's backend on Heroku.</p>
+      <br>The <b>targetUrl</b> will be the url of your Heroku app, it'll be something like <i>appname</i>.herokuapp.com, which will connect the client messages to the bot to the bot's backend on Heroku.</p>
+      Your <a href="https://developer.webex.com/endpoint-webhooks-post.html">webhook</a> request will look like a modified version of the following: <code>
+      <br>{
+	<br>"name": "Heroku Parrot",
+	<br>"targetUrl": "yourappname.herokuapp.com",
+	<br>"resource": "messages",
+	<br>"event": "created"
+    <br>}</code>
       <hr class="my-4">
-      <p>Need help or want to connect? Contact me on <a href="https://www.linkedin.com/in/laurenramgattie/">LinkedIn</a></p>
-    
+      <p>Need help or want to connect? Contact me on <a href="https://www.linkedin.com/in/laurenramgattie/" target="_blank">LinkedIn</a></p>  
     </div>
 
     <!-- Optional JavaScript -->
