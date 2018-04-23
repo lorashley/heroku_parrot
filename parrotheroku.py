@@ -1,7 +1,7 @@
 import requests
 import json
 import os
-from flask import Flask, request
+from flask import Flask, render_template, request
 
 # Init Flask
 app = Flask(__name__)
@@ -58,6 +58,11 @@ def listen(input):
 """
 ENTRY FUNCTION FOR HEROKU
 """
+
+@app.route('/', methods=['GET'])
+def landing():
+    return render_template('home.html')
+
 @app.route('/', methods=['POST'])
 def main():
 
