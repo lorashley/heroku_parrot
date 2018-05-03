@@ -66,10 +66,10 @@ def landing():
 @app.route('/', methods=['POST'])
 def main():
 
-    username = os.environ.get('SPARK_BOT_USERNAME')
+    username = 'serverparrot@sparkbot.io'
     #print("Username from environment: {}".format(username))
     
-    at = os.environ.get('SPARK_BOT_AUTH_TOKEN')
+    at = 'NjIyZjhmN2UtOTljNy00ODAwLWE4ZjItZjhmNjJlOGFhODBhNzM3OWIwOWMtMzg3'
     #print("auth: {}".format(at))
     # Get input info
     json_file = request.json
@@ -106,5 +106,5 @@ def main():
     return msg_dict['statuscode']
     
 if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 5111))
     app.run(host='0.0.0.0', port=port, debug=True)
