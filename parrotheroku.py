@@ -79,8 +79,8 @@ def main():
 
     # Check if the message came from the bot, if so, ignore
     person = data.get('personEmail')
-    if '@sparkbot.io' not in username:
-        bot_name = username + '@sparkbot.io'
+    if '@webex.bot' not in username:
+        bot_name = username + '@webex.bot'
     else:
         bot_name = username
     if person == bot_name:
